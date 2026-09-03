@@ -16,6 +16,7 @@ public class COMP258Labs {
         // TODO code application logic here
         System.out.println("Welcome to COMP 258");
         System.out.println("Lab 1: Array-based data structures");
+        // test
     }
     
 }
