@@ -17,6 +17,10 @@ public class COMP258Labs {
         System.out.println("Welcome to COMP 258");
         System.out.println("Lab 1: Array-based data structures");
         // test
+        
+        RandomNumberProgram rp = new RandomNumberProgram();
+        rp.run();
+
     }
-    
+
 }
