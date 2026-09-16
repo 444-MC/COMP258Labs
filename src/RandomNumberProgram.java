@@ -8,12 +8,10 @@
  * @author Laken
  */
 public class RandomNumberProgram extends ConsoleProgram {
-
     private int[] numbers = new int[20];
 
     @Override
     public int showMenu() {
-        System.out.println("Random Number Array Manager");
         System.out.println("1. Print Numbers");
         System.out.println("2. Search");
         System.out.println("3. Find and Replace");
