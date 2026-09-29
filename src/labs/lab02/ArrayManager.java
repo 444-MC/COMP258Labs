@@ -1,4 +1,8 @@
+package labs.lab02;
 
+
+import exceptions.OutOfBoundsException;
+import exceptions.NoItemsException;
 import java.util.ArrayList;
 
 /*

@@ -1,4 +1,7 @@
+package common;
 
+
+import drivers.DriverOfArrayManager;
 import java.util.ArrayList;
 
 /*
@@ -39,6 +42,5 @@ public class COMP258Labs {
 //        ap.Part1();
         DriverOfArrayManager driveOfArray = new DriverOfArrayManager();
         driveOfArray.run();
-
     }
 }
