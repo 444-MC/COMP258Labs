@@ -1,4 +1,4 @@
-package labs.lab02;
+package labs.lab01;
 
 
 import java.util.ArrayList;
@@ -12,6 +12,24 @@ import java.util.ArrayList;
  * @author Laken
  */
 public class ArrayPractice {
+    
+//        ArrayManagerInClass am = new ArrayManagerInClass(1);
+//
+//        try {
+//            am.add(6);
+//        } catch (ArrayFullException e) {
+//            System.out.println("Array is full! " + e);
+//        }
+//
+//        try {
+//            am.add(7);
+//        } catch (ArrayFullException e) {
+//            System.out.println("Array is full! " + e);
+//        }
+//        am.print();
+//        ArrayPractice ap = new ArrayPractice();
+//        ap.Part1();
+    
 
     public void Part1() {
         ArrayList<Integer> numbers = new ArrayList<>();

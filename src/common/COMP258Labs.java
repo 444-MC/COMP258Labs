@@ -1,8 +1,9 @@
 package common;
 
-
 import drivers.DriverOfArrayManager;
+import drivers.RandomNumberProgram;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -17,30 +18,51 @@ public class COMP258Labs {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public void start() {
+        String[] options = {
+            "Lab 1: Array-Based Data Structures",
+            "Lab 2: Random Number Program"
+        };
+        Scanner scanner = new Scanner(System.in);
+
         System.out.println("Welcome to COMP 258");
-        System.out.println("Lab 1: Array-based data structures");
-        //        RandomNumberProgram rp = new RandomNumberProgram();
-//        rp.run();
+        System.out.println();
 
-//        ArrayManagerInClass am = new ArrayManagerInClass(1);
-//
-//        try {
-//            am.add(6);
-//        } catch (ArrayFullException e) {
-//            System.out.println("Array is full! " + e);
-//        }
-//
-//        try {
-//            am.add(7);
-//        } catch (ArrayFullException e) {
-//            System.out.println("Array is full! " + e);
-//        }
-//        am.print();
+        for (int i = 0; i < options.length; i++) {
+            System.out.println((i + 1) + ". " + options[i]);
+        }
 
-//        ArrayPractice ap = new ArrayPractice();
-//        ap.Part1();
-        DriverOfArrayManager driveOfArray = new DriverOfArrayManager();
-        driveOfArray.run();
+        System.out.print("Please choose a lab: ");
+
+        int choice = scanner.nextInt();
+
+        handleMenuChoice(choice);
+    }
+
+    protected void handleMenuChoice(int choice) {
+        switch (choice) {
+
+            case 1 -> {
+                System.out.println("\n--- Running Lab 1 ---");
+                RandomNumberProgram rp = new RandomNumberProgram();
+                rp.run();
+            }
+
+            case 2 -> {
+                System.out.println("\n--- Running Lab 2 ---");
+                DriverOfArrayManager driveOfArray = new DriverOfArrayManager();
+                driveOfArray.run();
+            }
+            case 3 -> {
+                System.out.println("\n--- Running Lab 3 ---");
+            }
+            default ->
+                System.out.println("Invalid option.");
+        }
+    }
+
+    public static void main(String[] args) {
+        COMP258Labs labs = new COMP258Labs();
+        labs.start();
     }
 }
