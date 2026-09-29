@@ -1,9 +1,12 @@
 package common;
 
 import drivers.DriverOfArrayManager;
+import drivers.LinkedListApp;
 import drivers.RandomNumberProgram;
 import java.util.ArrayList;
 import java.util.Scanner;
+import labs.lab03.BuiltInLinkedListDemo;
+import labs.lab03.RunLinkedListTest;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -21,7 +24,8 @@ public class COMP258Labs {
     public void start() {
         String[] options = {
             "Lab 1: Array-Based Data Structures",
-            "Lab 2: Random Number Program"
+            "Lab 2: Random Number Program",
+            "Lab 3: LinkedLists"
         };
         Scanner scanner = new Scanner(System.in);
 
@@ -55,6 +59,8 @@ public class COMP258Labs {
             }
             case 3 -> {
                 System.out.println("\n--- Running Lab 3 ---");
+                LinkedListApp linkedListApp = new LinkedListApp();
+                linkedListApp.run();
             }
             default ->
                 System.out.println("Invalid option.");
