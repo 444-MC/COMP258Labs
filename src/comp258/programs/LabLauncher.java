@@ -9,6 +9,7 @@ import comp258.labs.ArrayManagerProgram;
 import comp258.labs.ComparableWidgetProgram;
 import comp258.labs.LinkedListProgram;
 import comp258.labs.RandomNumberProgram;
+import comp258.labs.RecursiveFunctionsProgram;
 
 /**
  *
@@ -24,16 +25,15 @@ public class LabLauncher extends ConsoleProgram {
                 =================================
                           COMP 258 Labs
                 =================================
-                 1  Random Number App
-                 2  Array Manager App
-                 3  Linked List App
-                 4  Generic List App
-                 
+                    1  Random Number App
+                    2  Manage data with ArrayManager
+                    3  Manage data with LinkedList
+                    4  Manage data with GenericLinkedList
+                    5  Showcase Recursive Functions
                  %d  Exit
                 =================================
                 """, QUIT_OPTION);
 
-        // 调用父类的方法读取用户输入的整数
         return readInt("Choose lab application: ");
     }
 
@@ -54,6 +54,8 @@ public class LabLauncher extends ConsoleProgram {
                 new LinkedListProgram();
             case 4 ->
                 new ComparableWidgetProgram();
+            case 5 ->
+                new RecursiveFunctionsProgram();
             default ->
                 null;
         };

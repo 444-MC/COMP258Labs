@@ -7,6 +7,7 @@ package comp258.collections;
 /**
  *
  * @author Laken
+ * @param <T>
  */
 public class GenericList<T extends Comparable<T>> {
 
@@ -114,5 +115,18 @@ public class GenericList<T extends Comparable<T>> {
                 current = temp.next != null ? temp.next : head;
             }
         }
+    }
+
+    public void printBackwards() {
+        printBackwardsRecursive(head);
+    }
+
+    private void printBackwardsRecursive(ListNode<T> node) {
+        if (node == null) {
+            return;
+        }
+
+        printBackwardsRecursive(node.next);
+        System.out.print(node.data + " ");
     }
 }
