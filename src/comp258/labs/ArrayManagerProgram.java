@@ -1,6 +1,5 @@
 package comp258.labs;
 
-
 import comp258.exceptions.OutOfBoundsException;
 import comp258.exceptions.NoItemsException;
 import comp258.practice.labs.lab02.ArrayManager;
@@ -31,6 +30,7 @@ public class ArrayManagerProgram extends ConsoleProgram {
         System.out.println("3. Add an item");
         System.out.println("4. Add an item at a position ");
         System.out.println("5. Remove an item");
+        System.out.println("6. Remove all occurrences");
         System.out.println("0. Return to Main Menu");
 
         return readInt("Select an option: ");
@@ -54,6 +54,9 @@ public class ArrayManagerProgram extends ConsoleProgram {
                 break;
             case 5:
                 removeAnItem();
+                break;
+            case 6:
+                runRemoveAllTest();
                 break;
             default:
                 System.out.println("Invalid choice.");
@@ -89,6 +92,19 @@ public class ArrayManagerProgram extends ConsoleProgram {
             System.out.println("Error: Index is out of bounds!");
         }
 
+    }
+
+    public void runRemoveAllTest() {
+        int[] testValues = {
+            1, 3, 4, 5, 3, 4, 3, 4, 1, 2, 5, 6
+        };
+        items = new ArrayManager(testValues);
+        System.out.println("Before:");
+        items.print();
+        items.removeAllOccurances(4);
+        System.out.println("After:");
+        items.print();
+        System.out.println("All occurrences removed.");
     }
 
 }

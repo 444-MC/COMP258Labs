@@ -135,4 +135,39 @@ public class LinkedList {
         }
         System.out.println("]");
     }
+
+    public void removeAllOccurances(Object o) {
+        ListNode previous = null;
+        ListNode node = items;
+
+        while (node != null) {
+
+            if (node.getData() == null
+                    ? o == null
+                    : node.getData().equals(o)) {
+
+                // Save the next node
+                ListNode next = node.nextNode;
+
+                // Remove the current node
+                if (previous == null) {
+                    items = next;
+                } else {
+                    previous.nextNode = next;
+                }
+
+                // Update current if the current node is removed
+                if (current == node) {
+                    current = next;
+                }
+
+                node = next;
+
+            } else {
+
+                previous = node;
+                node = node.nextNode;
+            }
+        }
+    }
 }

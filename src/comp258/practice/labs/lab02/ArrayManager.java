@@ -1,6 +1,5 @@
 package comp258.practice.labs.lab02;
 
-
 import comp258.exceptions.OutOfBoundsException;
 import comp258.exceptions.NoItemsException;
 import java.util.ArrayList;
@@ -93,4 +92,29 @@ public class ArrayManager {
         return count == 0;
     }
 
+    // Removes all occurrences of the specified integer
+    public void removeAllOccurances(Object o) {
+
+        if (!(o instanceof Integer)) {
+            return;
+        }
+
+        int target = (Integer) o;
+        int index = 0;
+
+        while (index < count) {
+
+            if (items[index] == target) {
+
+                try {
+                    remove(index);
+                } catch (NoItemsException e) {
+                    return;
+                }
+
+            } else {
+                index++;
+            }
+        }
+    }
 }

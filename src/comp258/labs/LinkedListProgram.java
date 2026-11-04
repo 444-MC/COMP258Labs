@@ -47,8 +47,10 @@ public class LinkedListProgram extends ConsoleProgram {
         System.out.println("7. Advance");
         System.out.println("8. Start");
         System.out.println("9. Run Test");
+        System.out.println("10. Remove all occurrences");
+
         System.out.println("0. Return to Main Menu");
-        
+
         return readInt("Enter your choice: ");
     }
 
@@ -88,10 +90,29 @@ public class LinkedListProgram extends ConsoleProgram {
             case 9:
                 runLinkedListTest();
                 break;
+            case 10:
+                runRemoveAllTest();
+                break;
             default:
                 System.out.println("Invalid option.");
                 break;
         }
+    }
+
+    public void runRemoveAllTest() {
+        int[] testValues = {
+            1, 3, 4, 5, 3, 4, 3, 4, 1, 2, 5, 6
+        };
+        list = new LinkedList();
+        for (int value : testValues) {
+            list.addAfter(value);
+        }
+        list.start();
+        System.out.println("Before:");
+        list.print();
+        list.removeAllOccurances(4);
+        System.out.println("After:");
+        list.print();
     }
 
 }
