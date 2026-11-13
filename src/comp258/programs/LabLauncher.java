@@ -6,6 +6,7 @@ package comp258.programs;
 
 import comp258.framework.ConsoleProgram;
 import comp258.labs.ArrayManagerProgram;
+import comp258.labs.BinarySearchTreeProgram;
 import comp258.labs.ComparableWidgetProgram;
 import comp258.labs.LinkedListProgram;
 import comp258.labs.RandomNumberProgram;
@@ -30,6 +31,7 @@ public class LabLauncher extends ConsoleProgram {
                     3  Manage data with LinkedList
                     4  Manage data with GenericLinkedList
                     5  Showcase Recursive Functions
+                    6  Binary Search Trees
                  %d  Exit
                 =================================
                 """, QUIT_OPTION);
@@ -56,6 +58,8 @@ public class LabLauncher extends ConsoleProgram {
                 new ComparableWidgetProgram();
             case 5 ->
                 new RecursiveFunctionsProgram();
+            case 6 ->
+                new BinarySearchTreeProgram();
             default ->
                 null;
         };
